@@ -6,6 +6,11 @@ layout: default
 
 {% for post in site.posts %}
     <h3>{{ post.title }}</h3>
-    <small>{{ post.date }}</small>
+    <small class="timeago">{{ post.date }}</small>
     <p>{{ post.content }}</p>
 {% endfor %}
+
+<script type="text/javascript" src="//timeago.yarp.com/jquery.timeago.js"></script>
+<script type="text/javascript">
+    $(".timeago").timeago();
+</script>
